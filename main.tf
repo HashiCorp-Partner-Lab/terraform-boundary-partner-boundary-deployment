@@ -54,21 +54,3 @@ resource "tfe_variable" "boundary_addr" {
   variable_set_id = tfe_variable_set.boundary_vs.id
   category        = "env"
 }
-
-# resource "tfe_variable" "boundary_admin_username" {
-#   key             = "BOUNDARY_ADMIN_USERNAME"
-#   value           = var.boundary_admin_username
-#   description     = "Boundary Admin Username"
-#   variable_set_id = tfe_variable_set.boundary_vs.id
-#   category        = "terraform"
-#   sensitive       = false
-# }
-
-# resource "tfe_variable" "boundary_admin_password" {
-#   key             = "BOUNDARY_ADMIN_PASSWORD"
-#   value           = var.boundary_admin_password
-#   description     = "Boundary Admin Password"
-#   variable_set_id = tfe_variable_set.boundary_vs.id
-#   category        = "terraform"
-#   sensitive       = true
-# }
