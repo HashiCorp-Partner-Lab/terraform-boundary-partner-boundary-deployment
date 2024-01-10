@@ -26,7 +26,7 @@ data "tfe_organization" "org_name" {
 
 
 resource "hcp_boundary_cluster" "partner_labs_boundary" {
-  cluster_id = "partner-boundary-cluster"
+  cluster_id = "boundary-cluster"
   username   = var.boundary_admin_username
   password   = var.boundary_admin_password
   tier       = "Plus"
@@ -39,8 +39,8 @@ resource "hcp_boundary_cluster" "partner_labs_boundary" {
 }
 
 resource "tfe_variable_set" "boundary_vs" {
-  name         = "Boundary Variables"
-  description  = "Boundary Variables"
+  name         = "Boundary Address Variable"
+  description  = "Boundary Address Variable"
   organization = data.tfe_organization.org_name.name
   global       = true
   depends_on   = [hcp_boundary_cluster.partner_labs_boundary]
