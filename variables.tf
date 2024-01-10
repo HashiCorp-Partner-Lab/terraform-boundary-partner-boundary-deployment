@@ -7,6 +7,7 @@ variable "boundary_admin_username" {
 variable "boundary_admin_password" {
   type        = string
   description = "Boundary Admin UI Password"
+  sensitive = true
 
 }
 
