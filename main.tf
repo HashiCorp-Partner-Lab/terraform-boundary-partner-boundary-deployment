@@ -64,7 +64,7 @@ resource "tfe_variable" "boundary_admin_password" {
 }
 
 resource "tfe_variable" "boundary_admin_username" {
-  key = "boundary_admin_password"
+  key = "boundary_admin_username"
   value = hcp_boundary_cluster.partner_labs_boundary.username
   description = "Boundary Admin Username"
   variable_set_id = tfe_variable_set.boundary_vs.id
