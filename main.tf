@@ -57,7 +57,7 @@ resource "tfe_variable" "boundary_addr" {
 
 resource "tfe_variable" "boundary_admin_password" {
   key = "boundary_admin_password"
-  value = hcp_boundary_cluster.partner_labs_boundary.password
+  value = var.boundary_admin_password
   description = "Boundary Admin Password"
   variable_set_id = tfe_variable_set.boundary_vs.id
   category = "terraform"
