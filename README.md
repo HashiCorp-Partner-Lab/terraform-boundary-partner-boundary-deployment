@@ -1,3 +1,4 @@
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -41,3 +42,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_boundary_cluster_url"></a> [boundary\_cluster\_url](#output\_boundary\_cluster\_url) | n/a |
+<!-- END_TF_DOCS -->
