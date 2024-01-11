@@ -61,6 +61,7 @@ resource "tfe_variable" "boundary_admin_password" {
   description = "Boundary Admin Password"
   variable_set_id = tfe_variable_set.boundary_vs.id
   category = "terraform"
+  sensitive = true
 }
 
 resource "tfe_variable" "boundary_admin_username" {
