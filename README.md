@@ -1,6 +1,9 @@
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_hcp"></a> [hcp](#requirement\_hcp) | >=0.77.0 |
+| <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | >=0.51.0 |
 
 ## Providers
 
@@ -35,4 +38,6 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_boundary_cluster_url"></a> [boundary\_cluster\_url](#output\_boundary\_cluster\_url) | n/a |
