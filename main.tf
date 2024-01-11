@@ -39,8 +39,8 @@ resource "hcp_boundary_cluster" "partner_labs_boundary" {
 }
 
 resource "tfe_variable_set" "boundary_vs" {
-  name         = "Boundary Address Variable"
-  description  = "Boundary Address Variable"
+  name         = "Boundary Variables"
+  description  = "Boundary Variables"
   organization = data.tfe_organization.org_name.name
   global       = true
   depends_on   = [hcp_boundary_cluster.partner_labs_boundary]
@@ -48,9 +48,27 @@ resource "tfe_variable_set" "boundary_vs" {
 
 
 resource "tfe_variable" "boundary_addr" {
-  key             = "BOUNDARY_ADDR"
+  key             = "boundary_addr"
   value           = hcp_boundary_cluster.partner_labs_boundary.cluster_url
   description     = "Boundary URL"
   variable_set_id = tfe_variable_set.boundary_vs.id
-  category        = "env"
+  category        = "terraform"
+}
+
+resource "tfe_variable" "boundary_admin_password" {
+  key = "boundary_admin_password"
+  value = hcp_boundary_cluster.partner_labs_boundary.password
+  description = "Boundary Admin Password"
+  variable_set_id = tfe_variable_set.boundary_vs.id
+  category = "terraform"
+}
+
+resource "tfe_variable" "boundary_admin_username" {
+  key = "boundary_admin_password"
+  value = hcp_boundary_cluster.partner_labs_boundary.username
+  description = "Boundary Admin Username"
+  variable_set_id = tfe_variable_set.boundary_vs.id
+  category = "terraform"
+  
+  
 }
