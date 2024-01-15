@@ -3,10 +3,10 @@ output "boundary_cluster_url" {
 }
 
 output "boundary_admin_username" {
-  value = nonsensitive(hcp_boundary_cluster.partner_labs_boundary.username)
+  value = hcp_boundary_cluster.partner_labs_boundary.username
 }
 
 output "boundary_admin_password" {
-  value = hcp_boundary_cluster.partner_labs_boundary.password
+  value = nonsensitive(hcp_boundary_cluster.partner_labs_boundary.password)
 }
 
